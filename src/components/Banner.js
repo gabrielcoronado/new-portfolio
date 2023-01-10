@@ -9,7 +9,7 @@ const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer"];
+  const toRotate = ["ull Stack Web Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>{`Hi I'm Gabriel`}</h1>
-            <h2 className="wrap">{text}</h2>
+            <h2 className="wrap">F{text}</h2>
             <p>lorem ipsum</p>
             <button onClick={() => console.log("connect")}>
               Let's Connect
