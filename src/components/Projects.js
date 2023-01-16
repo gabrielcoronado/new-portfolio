@@ -1,9 +1,11 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import youtube from "../assets/img/youtube-clone.jpeg";
 import portfolio from "../assets/img/my-portfolio.jpeg";
 import beads from "../assets/img/beads-color.jpeg";
 import chat from "../assets/img/chat-app.jpeg";
+import ProjectCard from "./ProjectCard";
+import colorSharp2 from "../assets/img/color-sharp2.png";
 
 const Projects = () => {
   const projects = [
@@ -39,11 +41,36 @@ const Projects = () => {
       <Container>
         <Row>
           <Col>
-            <h2>PRojects</h2>
+            <h2>Projects</h2>
             <p>lorem ipsum</p>
+            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+              <Nav variant="pills" defaultActiveKey="/home">
+                <Nav.Item>
+                  <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Tab.Container>
+            <Tab.Content>
+              <Tab.Pane eventKey="first">
+                <Row>
+                  {projects.map((project, i) => {
+                    return <ProjectCard key={i} {...project} />;
+                  })}
+                </Row>
+              </Tab.Pane>
+              <Tab.Pane eventKey="second">Lorem</Tab.Pane>
+              <Tab.Pane eventKey="third">Lorem</Tab.Pane>
+            </Tab.Content>
           </Col>
         </Row>
       </Container>
+      <img className="background-image-right" alt="" src={colorSharp2} />
     </section>
   );
 };

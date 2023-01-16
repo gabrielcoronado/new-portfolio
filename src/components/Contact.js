@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+// import "animate.css";
+// import TrackVisibility from "react-on-screen";
 
-export const Contact = () => {
+const Contact = () => {
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -48,7 +48,7 @@ export const Contact = () => {
 
   return (
     <section className="contact" id="connect">
-      <Container>
+      {/* <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <TrackVisibility>
@@ -145,7 +145,9 @@ export const Contact = () => {
             </TrackVisibility>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </section>
   );
 };
+
+export default Contact;
